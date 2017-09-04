@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--RelativeLayout ใช้จัดการ Layout หลัก-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context="com.student.codemobile.myauthendemo.MainActivity">
+    <!--LinearLayout ใช้จัดการ Layout ย่อยๆ-->
+    <!--wrap_content ขยายพอดีกับ Object ส่วน match_parent ขยาย object เต็ม-->
+    <!--ถ้าระบุ 54dp คือระบุความยาว ใช้หน่วย dp เพราะ px ความละเอียดต่างกัน ขึ้นอยู่กับหน้าจอ-->
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_nine_patch_mine"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/username_icon" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:hint="Username"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/password_icon" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/LoginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_btn"
+            android:text="Login with Webservice" />
+    </LinearLayout>
+
+    <fragment
+        android:name="com.student.codemobile.myauthendemo.GridFragment"
+        android:id="@+id/fragmentClone"
+        android:layout_below="@+id/login_layout"
+        android:layout_above="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.gms.ads.NativeExpressAdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="360x80"
+        ads:adUnitId="ca-app-pub-3863707967171930/9737670091" />
+    <!--โฆษณา-->
+</RelativeLayout>

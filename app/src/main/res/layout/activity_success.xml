@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.student.codemobile.myauthendemo.SuccessActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp"
+        android:padding="16dp"
+        android:visibility="visible"
+        ads:menu_colorNormal="@color/colorAccent"
+        ads:menu_colorPressed="#3cb6e3"
+        ads:menu_fab_label="กดซ่อน"
+        ads:menu_icon="@drawable/icon_plus_black"
+        ads:menu_labels_colorNormal="#00ffffff"
+        ads:menu_labels_colorPressed="#00ffffff"
+        ads:menu_labels_showShadow="false"
+        fab:menu_backgroundColor="#aa1d1c1c">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_training"
+            ads:fab_colorNormal="#BBDEFB"
+            ads:fab_colorPressed="#f9b84f"
+            ads:fab_shadowColor="#00ffffff"
+            fab:fab_label="Training"
+            fab:fab_size="mini"
+            fab:menu_labels_textSize="16sp" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_song"
+            ads:fab_colorNormal="#BBDEFB"
+            ads:fab_colorPressed="#f9b84f"
+            ads:fab_shadowColor="#00ffffff"
+            fab:fab_label="Songs"
+            fab:fab_size="mini"
+            fab:menu_labels_textSize="16sp" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_superhero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_hero"
+            ads:fab_colorNormal="#BBDEFB"
+            ads:fab_colorPressed="#f9b84f"
+            ads:fab_shadowColor="#00ffffff"
+            fab:fab_label="Super Hero"
+            fab:fab_size="mini"
+            fab:menu_labels_textSize="16sp" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_foods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_food"
+            ads:fab_colorNormal="#BBDEFB"
+            ads:fab_colorPressed="#f9b84f"
+            fab:fab_label="Foods"
+            fab:fab_size="mini"
+            fab:menu_labels_textSize="16sp" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
